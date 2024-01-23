@@ -15,7 +15,7 @@ Ignore any leading whitespace in the user’s greeting, and treat the user’s
 greeting case-insensitively.
 """
 #-----------------------------------
-greeting = input(print("Please, give me a greeting")).title().strip()
+greeting = input("Please, give me a greeting ").title().strip()
 h = greeting.find("H")
 
 if h == 0:

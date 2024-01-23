@@ -19,7 +19,7 @@ Note that, just as python itself is an interpreter for Python, so will
 your interpreter.py be an interpreter for math! 
 """
 #-----------------------------------------------------
-x, y, z = input(print("Please, give me an arithmetic expression")).split()
+x, y, z = input("Please, give me an arithmetic expression: ").split()
 
 x = float(x)
 z = float(z)

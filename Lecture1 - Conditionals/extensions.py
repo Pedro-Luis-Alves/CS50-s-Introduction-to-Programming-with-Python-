@@ -28,7 +28,7 @@ If the file’s name ends with some other suffix or has no suffix at all,
 output application/octet-stream instead, which is a common default.
 """
 #---------------------------------------------------
-x = input(print("Please, give me the name of a file"))
+x = input("Please, give me the name of a file: ")
 
 if x.endswith(".gif"):
     print("image/gif")

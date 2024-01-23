@@ -13,6 +13,6 @@ You’re welcome, but not required, to prompt the user explicitly, as by passing
 """
 #----------------------------------------
 
-sentence = input(print("Please, let me show you how to use your \"indoor voice\". Write a sentence using CAPSLOCK \n")).lower()
+sentence = input("Please, let me show you how to use your \"indoor voice\". Write a sentence using CAPSLOCK \n").lower()
 
 print(sentence)

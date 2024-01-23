@@ -23,7 +23,7 @@ If up for a challenge, optionally add support for 12-hour times, allowing the us
 """
 #--------------------------------------------
 def main():
-    time = input(print("What time is it?"))
+    time = input("What time is it? ")
     PM = False
 
     if "p.m." in time:
@@ -55,4 +55,5 @@ def convert(time):
     minutes = (minutes / 60)
     return hours + minutes
 
-main()
+if __name__ == "__main__":
+    main()

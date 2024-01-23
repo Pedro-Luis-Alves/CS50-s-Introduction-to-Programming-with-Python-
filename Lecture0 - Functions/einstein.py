@@ -13,7 +13,7 @@ and then outputs the equivalent number of Joules as an integer. Assume that the 
 """
 #----------------------------------------
 
-m = int(input(print("Please, insert the number for m")))
+m = int(input("Please, insert the number for m"))
 c = 300000000
 E = m*c*c
 print(E)

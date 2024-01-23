@@ -8,6 +8,5 @@ input and then outputs that same input, replacing each space with ... (i.e., thr
 """
 #----------------------------------------
 
-sentence = input(print("Please, write a sentence \n")).replace(" ", "...")
-
+sentence = input("Please, write a sentence \n").replace(" ", "...")
 print(sentence)

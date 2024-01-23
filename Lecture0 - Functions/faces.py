@@ -19,7 +19,7 @@ def convert(sentence):
     print(replacement)
 
 def main():
-    sentence = input(print("Hello! Write sentence and use faces in it, like :) or :( \n"))
+    sentence = input("Hello! Write sentence and use faces in it, like :) or :( \n")
     convert(sentence)
 
 main()
