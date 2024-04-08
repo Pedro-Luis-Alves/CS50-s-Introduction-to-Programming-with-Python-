@@ -29,26 +29,22 @@ import sys
 from pyfiglet import Figlet
 
 def main():
-    figlet = Figlet()
-
+    fonts = Figlet().getFonts()
+    
     if len(sys.argv) == 1:
-        figlet.setFont(font = random.choice(figlet.getFonts()))
-
-    elif len(sys.argv) == 3:
-        
-        if "-f" in sys.argv[1] or "--font" in sys.argv[1]:
-            for font in figlet.getFonts():
-                if font == sys.argv[2]:
-                    figlet.setFont(font = font)
-        
+        font = random.choice(fonts)
+    
+    elif len(sys.argv) == 3:    
+        if sys.argv[1] in ["-f", "--font"] and sys.argv[2] in fonts:
+            font = sys.argv[2]
+     
         else:
             sys.exit("Invalid usage")
     else:
         sys.exit("Invalid usage")
 
     text = input("Input: ")
-    print("Output:\n")
-    print(figlet.renderText(text))
+    print("Output:\n",  Figlet(font=font).renderText(text))
 
 
 if __name__ == "__main__":

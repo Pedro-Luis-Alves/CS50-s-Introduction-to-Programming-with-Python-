@@ -30,47 +30,23 @@ generated non-negative integer with level digits or raises a ValueError if level
 
 import random
 
-
 def main():
     level = get_level("Level: ")
     score = 0
 
-    for i in range(9):
+    for _ in range(10):
         x = generate_integer(level)
         y = generate_integer(level)
-        answer = x + y
-        miss = 0
-        hit = False
+        score += check_answer(x, y)
 
-        while miss != 3 and hit == False:
-
-            try:
-                guess = int(input(f"{x} + {y} = "))
-
-            except ValueError:
-                guess = -1
-
-            if guess == answer:
-               score += 1
-               hit = True
-
-            else:
-                miss += 1
-                print("EEE")
-                
-                if miss == 3:
-                    print(f"{x} + {y} = {answer}")
-    
     print("Score:", score)
 
-        
 
 def get_level(prompt):
     while True:
         try:
             level = int(input(prompt))
-
-            if level == 1 or level == 2 or level == 3:
+            if level in [1 , 2 , 3]:
                 return level
 
         except ValueError:
@@ -84,6 +60,22 @@ def generate_integer(level):
         return random.randint(10, 99)
     elif level == 3:
         return random.randint(100, 999)
+
+
+def check_answer(x, y):
+    tries = 0
+    while tries < 3:
+        try:
+            tries += 1
+            answer = int(input(f"{x} + {y} = "))
+            if answer == x + y:
+                return 1
+            else:
+                print("EEE")
+        except ValueError:
+            pass
+    print(f"{x} + {y} = {x + y}")
+    return 0
 
 
 if __name__ == "__main__":
